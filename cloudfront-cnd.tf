@@ -1,5 +1,7 @@
 module "cloudfront_s3_cdn" {
-  source      = "git@github.com:"
+  source  = "cloudposse/cloudfront-s3-cdn/aws"
+  version = "0.1.4"
+
   namespace   = var.project_name
   environment = var.environment
 
