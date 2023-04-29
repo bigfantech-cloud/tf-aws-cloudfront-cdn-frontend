@@ -10,15 +10,15 @@ module "cicd-frontend" {
   #CODEBUILD
   #---
   codebuild_cloudwatch_logs = false
-  buildspec_path            = "./buildspec.yml"
+  buildspec                 = file("./buildspec.yml")
 
   #---
   #CODEPIPELINE
   #---
   codestar_connection_arn = aws_codestarconnections_connection.github.arn
   aws_chatbot_slack_arn   = var.aws_chatbot_slack_arn
-  github_repository       = var.github_repository
-  github_branch           = var.github_branch
+  vcs_repository          = var.vcs_repository
+  vcs_branch              = var.vcs_branch
   deploy_provider         = "S3"
 
   deploy_config = {

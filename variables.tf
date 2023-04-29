@@ -22,13 +22,13 @@ variable "cicd_s3_name_attributes" {
   type        = list(string)
 }
 
-variable "github_repository" {
-  description = "GitHub Respository name"
+variable "vcs_repository" {
+  description = "VCS respository name"
   type        = string
 }
 
-variable "github_branch" {
-  description = "GitHub branch name"
+variable "vcs_branch" {
+  description = "VCS branch name"
   type        = string
 }
 
